@@ -10,7 +10,7 @@ import {
   SidebarMenu,
 } from './SidebarElements';
 
-function Sidebar({ isOpen, toggle }: { isOpen: any; toggle: any }) {
+function Sidebar({ isOpen, toggle }) {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>

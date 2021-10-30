@@ -3,11 +3,7 @@ import { Link as LinkR } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
 import styled from 'styled-components';
 
-type OpenType = {
-  isOpen?: Boolean;
-};
-
-export const SidebarContainer = styled.aside<OpenType>`
+export const SidebarContainer = styled.aside`
   position: fixed;
   z-index: 999;
   width: 100%;
