@@ -25,9 +25,17 @@ jobs:
         run: npm i
       - name: Build
         run: npm run build
+      - uses: actions/upload-artifact@master
+        with:
+          name: build-output
+          path: ./build
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/download-artifact@master
+        with:
+          name: build-output
+          path: ./build
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
