@@ -31,5 +31,5 @@ jobs:
         run: npm i
       - name: Build
         run: npm run build
-      - name: Deploy
+      - name: Deploy to s3
         run: aws s3 sync ./build s3://leslie-alldridge.dev
