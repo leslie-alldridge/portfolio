@@ -27,20 +27,22 @@ const Hero = () => {
         <VideoBg autoPlay muted loop src={Video} type='video/mp4' />
       </HeroBg>
       <HeroContent>
-        <HeroH1>Virtual Banking Made Easy</HeroH1>
+        <HeroH1>Leslie Alldridge</HeroH1>
         <HeroP>
-          Sign up for a new account today and receive $250 in credit towards
-          your next payment.
+          Full Stack Software Engineer with cloud infrastructure experience
+          based in Wellington, New Zealand
         </HeroP>
         <HeroBtnWrapper>
           <Button
-            to='signup'
+            to='./favicon.ico'
+            target='_blank'
+            download
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary='true'
             dark='true'
           >
-            Get started {hover ? <ArrowForward /> : <ArrowRight />}
+            Download CV {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
       </HeroContent>

@@ -12,7 +12,7 @@ import {
   NavBtnLink,
 } from './NavbarElements';
 
-const Navbar = ({ toggle }: { toggle: any }) => {
+const Navbar = ({ toggle }) => {
   return (
     <>
       <Nav>
@@ -26,18 +26,15 @@ const Navbar = ({ toggle }: { toggle: any }) => {
               <NavLinks to='about'>About</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='discover'>Discover</NavLinks>
+              <NavLinks to='experience'>Experience</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='services'>Services</NavLinks>
+              <NavLinks to='services'>Contact</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='signup'>Sign Up</NavLinks>
+              <NavLinks to='signup'>CV</NavLinks>
             </NavItem>
           </NavMenu>
-          <NavBtn>
-            <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-          </NavBtn>
         </NavbarContainer>
       </Nav>
     </>
