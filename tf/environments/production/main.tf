@@ -32,3 +32,10 @@ module "cloudfront" {
   domain        = local.domain
   bucket_domain = module.bucket.domain
 }
+
+module "route53" {
+  source            = "../../modules/route53"
+  domain            = local.domain
+  cloudfront_domain = module.cloudfront.cloudfront_domain
+  cloudfront_zone   = module.cloudfront.cloudfront_zone_id
+}
