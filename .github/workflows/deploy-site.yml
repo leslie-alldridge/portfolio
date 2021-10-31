@@ -14,14 +14,14 @@ jobs:
         uses: actions/cache@v1
         id: npm-cache
         with:
-            path: ~/.npm
-            key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-            restore-keys: ${{ runner.os }}-node-
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id:${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key:${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Use Node.js 16.x
         uses: actions/setup-node@v1
