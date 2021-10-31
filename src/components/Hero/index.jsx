@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from '../ButtonElements';
+import { Button } from '../Button/ButtonElements';
 import {
   HeroContainer,
   HeroBg,
@@ -22,7 +22,7 @@ const Hero = () => {
   };
 
   return (
-    <HeroContainer>
+    <HeroContainer id='hero'>
       <HeroBg>
         <VideoBg autoPlay muted loop src={Video} type='video/mp4' />
       </HeroBg>
@@ -34,7 +34,10 @@ const Hero = () => {
         </HeroP>
         <HeroBtnWrapper>
           <Button
-            to='./favicon.ico'
+            to={{
+              pathname:
+                'https://leslie-alldridge.dev/LeslieAlldridgeCV-2021.pdf',
+            }}
             target='_blank'
             download
             onMouseEnter={onHover}

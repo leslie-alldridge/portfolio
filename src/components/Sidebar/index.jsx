@@ -4,8 +4,6 @@ import {
   Icon,
   SidebarContainer,
   SidebarLink,
-  SideBtnWrap,
-  SidebarRoute,
   SidebarWrapper,
   SidebarMenu,
 } from './SidebarElements';
@@ -24,16 +22,13 @@ function Sidebar({ isOpen, toggle }) {
           <SidebarLink to='experience' onClick={toggle}>
             Experience
           </SidebarLink>
-          <SidebarLink to='services' onClick={toggle}>
-            Services
+          <SidebarLink to='contact' onClick={toggle}>
+            Contact
           </SidebarLink>
-          <SidebarLink to='sign up' onClick={toggle}>
-            Sign Up
+          <SidebarLink to='services' onClick={toggle}>
+            Cloud
           </SidebarLink>
         </SidebarMenu>
-        <SideBtnWrap>
-          <SidebarRoute to='/signin'>Sign In</SidebarRoute>
-        </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
   );

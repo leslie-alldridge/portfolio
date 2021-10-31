@@ -8,6 +8,7 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
+  NavLinksExternal,
 } from './NavbarElements';
 
 const Navbar = ({ toggle }) => {
@@ -15,7 +16,7 @@ const Navbar = ({ toggle }) => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to='/'>Leslie Alldridge</NavLogo>
+          <NavLogo to='hero'>Leslie Alldridge</NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
@@ -27,10 +28,21 @@ const Navbar = ({ toggle }) => {
               <NavLinks to='experience'>Experience</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='services'>Contact</NavLinks>
+              <NavLinks to='contact'>Contact</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='signup'>CV</NavLinks>
+              <NavLinks to='services'>Cloud</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinksExternal
+                to={{
+                  pathname:
+                    'https://leslie-alldridge.dev/LeslieAlldridgeCV-2021.pdf',
+                }}
+                target='_blank'
+              >
+                CV
+              </NavLinksExternal>
             </NavItem>
           </NavMenu>
         </NavbarContainer>

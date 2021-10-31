@@ -1,5 +1,5 @@
-import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
@@ -29,7 +29,7 @@ export const NavbarContainer = styled.div`
   max-width: 1100px;
 `;
 
-export const NavLogo = styled(LinkR)`
+export const NavLogo = styled(LinkS)`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
@@ -72,6 +72,20 @@ export const NavItem = styled.li`
   height: 80px;
 `;
 
+export const NavLinksExternal = styled(Link)`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 1px solid #66fcf1;
+  }
+`;
+
 export const NavLinks = styled(LinkS)`
   color: #fff;
   display: flex;
@@ -81,8 +95,8 @@ export const NavLinks = styled(LinkS)`
   height: 100%;
   cursor: pointer;
 
-  &.active {
-    border-bottom: 3px solid #66fcf1;
+  &:hover {
+    border-bottom: 1px solid #66fcf1;
   }
 `;
 
@@ -92,25 +106,5 @@ export const NavBtn = styled.nav`
 
   @media screen and (max-width: 768px) {
     display: none;
-  }
-`;
-
-export const NavBtnLink = styled(LinkR)`
-  border-radius: 50px;
-  background: #66fcf1;
-  white-space: nowrap;
-  padding: 10px 22px;
-  color: #1f2833;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #1f2833;
   }
 `;

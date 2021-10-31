@@ -13,6 +13,7 @@ import {
   WebsiteRights,
   SocialIcons,
   SocialIconLink,
+  FooterLinkExternal,
 } from './FooterElements';
 
 const URLS = {
@@ -29,18 +30,30 @@ const Footer = () => {
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>Sitemap</FooterLinkTitle>
-              <FooterLink to='/'>About</FooterLink>
-              <FooterLink to='/signin'>Experience</FooterLink>
-              <FooterLink to='/signin'>Contact</FooterLink>
-              <FooterLink to='/signin'>CV</FooterLink>
+              <FooterLink to='about'>About</FooterLink>
+              <FooterLink to='experience'>Experience</FooterLink>
+              <FooterLink to='contact'>Contact</FooterLink>
+              <FooterLink to='services'>Cloud</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>Contact</FooterLinkTitle>
-              <FooterLink href={URLS.Email}>Email</FooterLink>
-              <FooterLink href={URLS.LinkedIn}>LinkedIn</FooterLink>
-              <FooterLink href={URLS.GitHub}>GitHub</FooterLink>
+              <FooterLinkExternal to={{ pathname: URLS.Email }} target='_blank'>
+                Email
+              </FooterLinkExternal>
+              <FooterLinkExternal
+                to={{ pathname: URLS.LinkedIn }}
+                target='_blank'
+              >
+                LinkedIn
+              </FooterLinkExternal>
+              <FooterLinkExternal
+                to={{ pathname: URLS.GitHub }}
+                target='_blank'
+              >
+                GitHub
+              </FooterLinkExternal>
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>
