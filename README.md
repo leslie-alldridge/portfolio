@@ -3,7 +3,7 @@
 <img src="./media/waving-hello-kitty.gif" width="250" height="150"/>
 </div>
 
-**Portfolio** :arrow_right: [leslie-alldridge.dev]('https://leslie-alldridge.dev')
+**Portfolio** :arrow_right: [leslie-alldridge.dev](https://leslie-alldridge.dev)
 
 ![Leslie's GitHub stats](https://github-readme-stats.vercel.app/api?username=leslie-alldridge&count_private=true&theme=radical)
 
