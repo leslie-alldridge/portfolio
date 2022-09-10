@@ -69,7 +69,3 @@ resource "aws_cloudfront_distribution" "distribution" {
     response_page_path = "/index.html"
   }
 }
-
-variable "test" {
-  default = "test"
-}

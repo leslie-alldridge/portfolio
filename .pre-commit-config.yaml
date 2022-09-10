@@ -4,6 +4,8 @@ repos:
     hooks:
       - id: terraform-fmt
       - id: tflint
-        args:
-          - "--module"
-          - "--config=.tflint.hcl"
+        name: tflinting
+        files: \.tf
+        entry: bash -c "find . -type f -name '*.tf' | xargs -I % dirname % | sort -u | xargs -I '{}' bash -c 'tflint {}'"
+        language: system
+        verbose: true
