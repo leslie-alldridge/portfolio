@@ -1,8 +1,13 @@
 terraform {
+  backend "s3" {
+    bucket = "tf-state-production"
+    key    = "portfolio"
+    region = "ap-southeast-2"
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.63.0"
+      version = "~> 4.30.0"
     }
   }
 }
