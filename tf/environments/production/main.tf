@@ -44,3 +44,34 @@ module "route53" {
   cloudfront_domain = module.cloudfront.cloudfront_domain
   cloudfront_zone   = module.cloudfront.cloudfront_zone_id
 }
+
+resource "aws_iam_user" "s3_cloudfront" {
+  name = "s3-deploy-github-actions"
+}
+
+data "aws_iam_policy" "required-policy" {
+  name = "AmazonS3FullAccess"
+}
+
+resource "aws_iam_user_policy_attachment" "s3" {
+  user       = aws_iam_user.s3_cloudfront.name
+  policy_arn = data.aws_iam_policy.required-policy.arn
+}
+
+resource "aws_iam_user_policy" "allow_cloudfront" {
+  name = "cloudfront"
+  user = aws_iam_user.s3_cloudfront.name
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action = [
+          "cloudfront:CreateInvalidation",
+        ]
+        Effect   = "Allow"
+        Resource = module.cloudfront.cloudfront_arn
+      },
+    ]
+  })
+}
