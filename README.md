@@ -8,10 +8,11 @@
 ![Leslie's GitHub stats](https://github-readme-stats.vercel.app/api?username=leslie-alldridge&count_private=true&theme=radical)
 
 
-**Current Role**: Software Engineer @ Montoux
+**Current Role**: Infrastructure Engineer @ Xero
 
 **Previous Roles**:
 
+- Infrastructure Engineer (Montoux)
 - Software Engineer (Xero)
 - Site Reliability Engineer (Xero)
 - Technical Support Specialist (Xero)
